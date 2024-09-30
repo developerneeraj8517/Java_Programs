@@ -7,23 +7,19 @@ public class StackEx {
 	public static void main(String[] args) {
 		Stack<Integer> s=new Stack<>();
 		
-		s.push(10);
-		s.push(15);
-		s.push(20);
-		s.push(25);
-		s.push(30);
-		s.push(35);
-		s.push(40);
-		s.push(45);
-		s.push(50);
-		s.push(55);
+		// pushing 10 elements to the stack
+		for(int i=10; i<=100;i=i+10) {
+			s.push(i);
+		}
+		System.out.println("Initial Stack is:  "+s);
 		
-		System.out.println(s);
+//		removing 4 elements from the stack
+		for(int i=0;i<4;i++) {
+			int remove=s.pop();
+			System.out.println("Removed element is : "+remove);
+		}
+		//display the remaining element in the stack
+		System.out.println("Stack after removing four element: "+s);
 		
-		s.remove(s.peek());
-		s.remove(s.peek());
-		s.remove(s.peek());
-		s.remove(s.peek());
-		System.out.println(s);
 	}
 }
